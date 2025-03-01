@@ -3,8 +3,11 @@ This project aims to approximate the Forrester function using a combination of M
 
 # Key Components
 **Forrester Function:** A well-known test function used in surrogate modeling and optimization.
+
 **MCMC Simulation:** Used to sample from the posterior distribution and guide the selection of points.
+
 **Gaussian Processes:** Employed as a surrogate model for the function approximation.
+
 **Optimization Algorithm:** Designed to query the least number of points while achieving a high level of approximation accuracy.
 
 
