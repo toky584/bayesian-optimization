@@ -1,14 +1,31 @@
 # Bayesian optimization using Numpyro 
-This project aims to approximate the Forrester function using a combination of MCMC simulation and Gaussian Processes. The goal is to build an algorithm that can query the least number of points to accurately approximate the function's behavior. The project demonstrates how to efficiently select and evaluate these points for optimal function approximation.
 
-# Key Components
-**Forrester Function:** A well-known test function used in surrogate modeling and optimization.
+This project aims to approximate the Forrester function using a combination of Markov Chain Monte Carlo (MCMC) simulation and Gaussian Processes (GP). The goal is to build an algorithm that can query the least number of points to accurately approximate the function's behavior. The project demonstrates how to efficiently select and evaluate these points for optimal function approximation.
 
-**MCMC Simulation:** Used to sample from the posterior distribution and guide the selection of points.
+## Key Components
 
-**Gaussian Processes:** Employed as a surrogate model for the function approximation.
+- **Forrester Function:** A well-known test function used in surrogate modeling and optimization.
+- **MCMC Simulation:** Used to sample from the posterior distribution and guide the selection of points.
+- **Gaussian Processes:** Employed as a surrogate model for the function approximation.
+- **Optimization Algorithm:** Designed to query the least number of points while achieving a high level of approximation accuracy.
 
-**Optimization Algorithm:** Designed to query the least number of points while achieving a high level of approximation accuracy.
+## Project Structure
 
+- `src/main.py`: The entry point for running the Bayesian Optimization loop.
+- `src/gp.py`: Gaussian Process model definition and prediction using `numpyro`.
+- `src/mcmc.py`: Implementation of the MCMC sampling for the GP using NUTS.
+- `src/acquisition.py`: Acquisition function logic for selecting the next point (e.g., lower confidence bound).
+- `src/forrester.py`: The objective function being optimized.
+
+## Usage
+
+To run the optimization loop:
+
+```bash
+cd src
+python main.py
+```
+
+## Results
 
 ![Image](https://github.com/user-attachments/assets/a80ea566-4b71-4421-870c-cd3b5e75b93f)
